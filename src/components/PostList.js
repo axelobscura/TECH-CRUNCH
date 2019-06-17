@@ -18,6 +18,9 @@ class PostList extends Component{
     });
   }
 
+  createMarkup(html){
+    return {__html: html}
+  }
 
   render(){
     return(
@@ -27,6 +30,11 @@ class PostList extends Component{
             <div className="card" key={post.id}>
               <div className="card-content">
                 <h3>{post.title.rendered}</h3>
+                <div 
+                  dangerouslySetInnerHTML={this.createMarkup(
+                    post.excerpt.rendered
+                  )}
+                />
               </div>
             </div>
           </Link>
