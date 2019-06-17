@@ -1,10 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Header(){
+const Header = () => {
   return(
-    <div>
-      <h1>Header</h1>
-    </div>
+    <nav className="navbar is-primary">
+      <div className="container has-text-centered">
+        <div className="navbar-brand">
+          <p className="is-size-3">
+            <Link to="/" className="has-text-white">
+              WORDPRESS + REACT
+            </Link>
+          </p>
+        </div>
+      </div>
+    </nav>
   )
 }
 
